@@ -32,6 +32,7 @@
             this.Nombre = new System.Windows.Forms.TextBox();
             this.Apellido = new System.Windows.Forms.TextBox();
             this.Edad = new System.Windows.Forms.TextBox();
+            this.EliminarCita = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CrearCita
@@ -65,11 +66,21 @@
             this.Edad.Size = new System.Drawing.Size(100, 20);
             this.Edad.TabIndex = 4;
             // 
+            // EliminarCita
+            // 
+            this.EliminarCita.Location = new System.Drawing.Point(557, 195);
+            this.EliminarCita.Name = "EliminarCita";
+            this.EliminarCita.Size = new System.Drawing.Size(100, 28);
+            this.EliminarCita.TabIndex = 5;
+            this.EliminarCita.Text = "Eliminar Cita";
+            this.EliminarCita.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.EliminarCita);
             this.Controls.Add(this.Edad);
             this.Controls.Add(this.Apellido);
             this.Controls.Add(this.Nombre);
@@ -87,6 +98,7 @@
         private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.TextBox Apellido;
         private System.Windows.Forms.TextBox Edad;
+        private System.Windows.Forms.Button EliminarCita;
     }
 }
 
