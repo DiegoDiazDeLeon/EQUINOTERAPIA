@@ -13,5 +13,10 @@ namespace Equinoterapia
         public string apellido{ get; set; }
         public string dicapacidad { get; set; }
         public int edad { get; set; }
+        public DateTime cumpleanios  {get; set; }
+        public DateTime fechaInicio { get; set; }
+
+        public string curp { get; set; }
+
     }
 }
