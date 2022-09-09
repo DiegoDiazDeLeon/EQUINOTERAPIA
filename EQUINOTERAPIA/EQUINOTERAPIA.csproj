@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beneficiarios.cs" />
+    <Compile Include="Caballo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

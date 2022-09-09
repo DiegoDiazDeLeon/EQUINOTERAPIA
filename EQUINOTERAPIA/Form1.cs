@@ -57,12 +57,46 @@ namespace Equinoterapia
         {
             Beneficiarios bnf = new Beneficiarios()
             {
-                nombre =Nombre.Text,
-                apellido =Apellido.Text,
-            };
-                client.Set("BENEFES/" + Nombre.Text,bnf);
-                MessageBox.Show("correcto");
-         }
+                nombre = Nombre.Text,
+                apellido = Apellido.Text,
+                edad= Convert.ToInt32(Edad.Text),
+                curp = Curp.Text,
 
+            };
+            client.Set("BENEFES/" + Nombre.Text, bnf);
+            MessageBox.Show("correcto");
+        }
+
+        private void AgregaCaballo_Click(object sender, EventArgs e)
+        {
+            Caballo caballo = new Caballo()
+            {
+                nombre = textBoxNombreCaballo.Text,
+                edad = Int32.Parse(textBoxEdadCaballo.Text),
+                peso = Int32.Parse(textBoxPesoCaballo.Text),
+                fechaInicio = dateTimePicker1.Value,
+            };
+            client.Set("CABALLO/" + caballo.nombre, caballo);
+            MessageBox.Show("correcto");
+        }
+
+        private void EliminarBeneficiario_Click(object sender, EventArgs e)
+        {
+            client.Delete("BENEFES/" + Nombre.Text);
+            MessageBox.Show("correcto el usuario"+Nombre.Text+"ah Sido eliminado");
+        }
+
+        private void ActualizaBeneficiario_Click(object sender, EventArgs e)
+        {
+            Beneficiarios bnf = new Beneficiarios()
+            {
+                nombre = Nombre.Text,
+                apellido = Apellido.Text,
+                edad = Convert.ToInt32(Edad.Text),
+                curp = Curp.Text,
+            };
+            client.Update("BENEFES/" + Nombre.Text, bnf);
+            MessageBox.Show("correcto se han actualizado Datos");
+        }
     }
 }
