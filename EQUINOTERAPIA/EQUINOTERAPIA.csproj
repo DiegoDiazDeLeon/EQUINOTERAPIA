@@ -69,18 +69,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgendarCita.Designer.cs">
+      <DependentUpon>AgendarCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarColaborador.Designer.cs">
+      <DependentUpon>AgregarColaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPersona.Designer.cs">
+      <DependentUpon>AgregarPersona.cs</DependentUpon>
+    </Compile>
     <Compile Include="Beneficiarios.cs" />
     <Compile Include="Caballo.cs" />
+    <Compile Include="Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Citas.Designer.cs">
+      <DependentUpon>Citas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Iniciocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Iniciocs.Designer.cs">
+      <DependentUpon>Iniciocs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgendarCita.resx">
+      <DependentUpon>AgendarCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarColaborador.resx">
+      <DependentUpon>AgregarColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarPersona.resx">
+      <DependentUpon>AgregarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Citas.resx">
+      <DependentUpon>Citas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Iniciocs.resx">
+      <DependentUpon>Iniciocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
