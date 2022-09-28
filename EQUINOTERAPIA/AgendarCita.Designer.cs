@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.label_CURP = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.monthCalendar_fecha = new System.Windows.Forms.MonthCalendar();
             this.comboBox1_CURP = new System.Windows.Forms.ComboBox();
             this.label_Nombre = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_Hora = new System.Windows.Forms.ComboBox();
             this.label_Horario = new System.Windows.Forms.Label();
             this.textBox_Notas = new System.Windows.Forms.TextBox();
             this.label_Notas = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_Aceptar = new System.Windows.Forms.Button();
             this.button_Cancelar = new System.Windows.Forms.Button();
+            this.comboBox_Caballo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label_CURP
@@ -51,18 +51,18 @@
             this.label_CURP.TabIndex = 0;
             this.label_CURP.Text = "CURP:";
             // 
-            // monthCalendar1
+            // monthCalendar_fecha
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(534, 18);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 1;
+            this.monthCalendar_fecha.Location = new System.Drawing.Point(534, 18);
+            this.monthCalendar_fecha.Name = "monthCalendar_fecha";
+            this.monthCalendar_fecha.TabIndex = 1;
             // 
             // comboBox1_CURP
             // 
             this.comboBox1_CURP.FormattingEnabled = true;
             this.comboBox1_CURP.Location = new System.Drawing.Point(119, 21);
             this.comboBox1_CURP.Name = "comboBox1_CURP";
-            this.comboBox1_CURP.Size = new System.Drawing.Size(388, 21);
+            this.comboBox1_CURP.Size = new System.Drawing.Size(166, 21);
             this.comboBox1_CURP.TabIndex = 2;
             // 
             // label_Nombre
@@ -71,24 +71,17 @@
             this.label_Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Nombre.Location = new System.Drawing.Point(12, 66);
             this.label_Nombre.Name = "label_Nombre";
-            this.label_Nombre.Size = new System.Drawing.Size(84, 24);
+            this.label_Nombre.Size = new System.Drawing.Size(78, 24);
             this.label_Nombre.TabIndex = 3;
-            this.label_Nombre.Text = "Nombre:";
+            this.label_Nombre.Text = "Caballo:";
             // 
-            // textBox1
+            // comboBox_Hora
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 20);
-            this.textBox1.TabIndex = 4;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(119, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(122, 21);
-            this.comboBox1.TabIndex = 5;
+            this.comboBox_Hora.FormattingEnabled = true;
+            this.comboBox_Hora.Location = new System.Drawing.Point(119, 114);
+            this.comboBox_Hora.Name = "comboBox_Hora";
+            this.comboBox_Hora.Size = new System.Drawing.Size(166, 21);
+            this.comboBox_Hora.TabIndex = 5;
             // 
             // label_Horario
             // 
@@ -118,15 +111,16 @@
             this.label_Notas.TabIndex = 8;
             this.label_Notas.Text = "Notas:";
             // 
-            // button2
+            // button_Aceptar
             // 
-            this.button2.BackColor = System.Drawing.Color.Lime;
-            this.button2.Location = new System.Drawing.Point(466, 387);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(177, 42);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Aceptar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.button_Aceptar.BackColor = System.Drawing.Color.Lime;
+            this.button_Aceptar.Location = new System.Drawing.Point(466, 387);
+            this.button_Aceptar.Name = "button_Aceptar";
+            this.button_Aceptar.Size = new System.Drawing.Size(177, 42);
+            this.button_Aceptar.TabIndex = 30;
+            this.button_Aceptar.Text = "Aceptar";
+            this.button_Aceptar.UseVisualStyleBackColor = false;
+            this.button_Aceptar.Click += new System.EventHandler(this.button_Aceptar_Click);
             // 
             // button_Cancelar
             // 
@@ -139,21 +133,29 @@
             this.button_Cancelar.UseVisualStyleBackColor = false;
             this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
             // 
+            // comboBox_Caballo
+            // 
+            this.comboBox_Caballo.FormattingEnabled = true;
+            this.comboBox_Caballo.Location = new System.Drawing.Point(119, 66);
+            this.comboBox_Caballo.Name = "comboBox_Caballo";
+            this.comboBox_Caballo.Size = new System.Drawing.Size(166, 21);
+            this.comboBox_Caballo.TabIndex = 31;
+            // 
             // AgendarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 446);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.comboBox_Caballo);
+            this.Controls.Add(this.button_Aceptar);
             this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.label_Notas);
             this.Controls.Add(this.textBox_Notas);
             this.Controls.Add(this.label_Horario);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox_Hora);
             this.Controls.Add(this.label_Nombre);
             this.Controls.Add(this.comboBox1_CURP);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.monthCalendar_fecha);
             this.Controls.Add(this.label_CURP);
             this.Name = "AgendarCita";
             this.Text = "AgendarCita";
@@ -165,15 +167,15 @@
         #endregion
 
         private System.Windows.Forms.Label label_CURP;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar monthCalendar_fecha;
         private System.Windows.Forms.ComboBox comboBox1_CURP;
         private System.Windows.Forms.Label label_Nombre;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_Hora;
         private System.Windows.Forms.Label label_Horario;
         private System.Windows.Forms.TextBox textBox_Notas;
         private System.Windows.Forms.Label label_Notas;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_Aceptar;
         private System.Windows.Forms.Button button_Cancelar;
+        private System.Windows.Forms.ComboBox comboBox_Caballo;
     }
 }
