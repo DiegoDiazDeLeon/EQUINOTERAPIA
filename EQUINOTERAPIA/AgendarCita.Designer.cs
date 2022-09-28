@@ -38,7 +38,7 @@
             this.textBox_Notas = new System.Windows.Forms.TextBox();
             this.label_Notas = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Cancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_CURP
@@ -85,7 +85,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(119, 105);
+            this.comboBox1.Location = new System.Drawing.Point(119, 111);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(122, 21);
             this.comboBox1.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             this.label_Horario.AutoSize = true;
             this.label_Horario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Horario.Location = new System.Drawing.Point(12, 105);
+            this.label_Horario.Location = new System.Drawing.Point(12, 111);
             this.label_Horario.Name = "label_Horario";
             this.label_Horario.Size = new System.Drawing.Size(77, 24);
             this.label_Horario.TabIndex = 6;
@@ -128,15 +128,16 @@
             this.button2.Text = "Aceptar";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // button_Cancelar
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(156, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 42);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_Cancelar.BackColor = System.Drawing.Color.Red;
+            this.button_Cancelar.Location = new System.Drawing.Point(156, 387);
+            this.button_Cancelar.Name = "button_Cancelar";
+            this.button_Cancelar.Size = new System.Drawing.Size(177, 42);
+            this.button_Cancelar.TabIndex = 29;
+            this.button_Cancelar.Text = "Cancelar";
+            this.button_Cancelar.UseVisualStyleBackColor = false;
+            this.button_Cancelar.Click += new System.EventHandler(this.button_Cancelar_Click);
             // 
             // AgendarCita
             // 
@@ -144,7 +145,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 446);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_Cancelar);
             this.Controls.Add(this.label_Notas);
             this.Controls.Add(this.textBox_Notas);
             this.Controls.Add(this.label_Horario);
@@ -173,6 +174,6 @@
         private System.Windows.Forms.TextBox textBox_Notas;
         private System.Windows.Forms.Label label_Notas;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Cancelar;
     }
 }

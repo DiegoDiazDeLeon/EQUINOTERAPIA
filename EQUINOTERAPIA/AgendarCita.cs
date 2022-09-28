@@ -16,5 +16,10 @@ namespace EQUINOTERAPIA
         {
             InitializeComponent();
         }
+
+        private void button_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

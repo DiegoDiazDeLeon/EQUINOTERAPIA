@@ -16,7 +16,7 @@ namespace Equinoterapia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EQUINOTERAPIA.Citas());
+            Application.Run(new EQUINOTERAPIA.InterfazCitas());
         }
     }
 }
