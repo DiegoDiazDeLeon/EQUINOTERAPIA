@@ -77,7 +77,6 @@ C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debu
 C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.exe
 C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.pdb
 C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.csproj.SuggestedBindingRedirects.cache
-C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.Citas.resources
 C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgendarCita.resources
 C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgregarColaborador.resources
 C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgregarPersona.resources
@@ -86,3 +85,4 @@ C:\Users\yeyok\Documents\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.Agr
 C:\Users\yeyok\Documents\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgregarPersona.resources
 C:\Users\yeyok\Documents\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.Citas.resources
 C:\Users\yeyok\Documents\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.Iniciocs.resources
+C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.InterfazCitas.resources

@@ -89,11 +89,12 @@
     </Compile>
     <Compile Include="Beneficiarios.cs" />
     <Compile Include="Caballo.cs" />
-    <Compile Include="Citas.cs">
+    <Compile Include="Citas.cs" />
+    <Compile Include="InterfazCitas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Citas.Designer.cs">
-      <DependentUpon>Citas.cs</DependentUpon>
+    <Compile Include="InterfazCitas.Designer.cs">
+      <DependentUpon>InterfazCitas.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -118,8 +119,8 @@
     <EmbeddedResource Include="AgregarPersona.resx">
       <DependentUpon>AgregarPersona.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Citas.resx">
-      <DependentUpon>Citas.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazCitas.resx">
+      <DependentUpon>InterfazCitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
