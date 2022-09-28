@@ -81,3 +81,8 @@ C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debu
 C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgendarCita.resources
 C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgregarColaborador.resources
 C:\Users\luiz-\Source\Repos\DiegoDiazDeLeon\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgregarPersona.resources
+C:\Users\yeyok\Documents\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgendarCita.resources
+C:\Users\yeyok\Documents\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgregarColaborador.resources
+C:\Users\yeyok\Documents\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.AgregarPersona.resources
+C:\Users\yeyok\Documents\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.Citas.resources
+C:\Users\yeyok\Documents\EQUINOTERAPIA\EQUINOTERAPIA\obj\Debug\EQUINOTERAPIA.Iniciocs.resources

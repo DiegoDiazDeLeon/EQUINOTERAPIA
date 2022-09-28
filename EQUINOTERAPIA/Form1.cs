@@ -63,8 +63,16 @@ namespace Equinoterapia
                 curp = Curp.Text,
 
             };
-            client.Set("BENEFES/" + Nombre.Text, bnf);
-            MessageBox.Show("correcto");
+            try
+            {
+                client.Set("BENEFES/" + Nombre.Text, bnf);
+                MessageBox.Show("correcto");
+            }
+            catch
+            {
+                MessageBox.Show("Incorrecta El añadir");
+            }
+            
         }
 
         private void AgregaCaballo_Click(object sender, EventArgs e)
@@ -97,6 +105,37 @@ namespace Equinoterapia
             };
             client.Update("BENEFES/" + Nombre.Text, bnf);
             MessageBox.Show("correcto se han actualizado Datos");
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            FirebaseResponse response =client.Get("BENEFES/");
+            Dictionary<string, Beneficiarios> getBeneficiarios = response.ResultAs<Dictionary<string, Beneficiarios>>();
+            //var get in getBeneficiarios;
+            foreach( var get in getBeneficiarios)
+            {
+                //para encontrar un usuario o Cita
+                if(get.Value.nombre == "sergio")
+                {
+                    label1.Text = "se encontro correctamente";
+                }
+                else
+                {
+                    label1.Text = "no se encontro el usuario";
+                }
+                //label1.Text= get.Value.nombre;
+                Nombre.Text = get.Value.nombre;
+                Apellido.Text = get.Value.apellido;
+                Edad.Text = Convert.ToString(get.Value.edad);
+
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
