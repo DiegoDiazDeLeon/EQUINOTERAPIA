@@ -107,9 +107,10 @@ namespace Equinoterapia
             MessageBox.Show("correcto se han actualizado Datos");
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
-            string usuario;
+            
             FirebaseResponse response =client.Get("BENEFES/");
             Dictionary<string, Beneficiarios> getBeneficiarios = response.ResultAs<Dictionary<string, Beneficiarios>>();
             //var get in getBeneficiarios;

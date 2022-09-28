@@ -49,6 +49,7 @@ namespace EQUINOTERAPIA
             foreach (var get in getBeneficiarios)
             {
                 dataGridView_Citas.Rows.Add(
+
                     get.Value.nombre,
                     get.Value.apellido,
                     Convert.ToString(get.Value.edad)
