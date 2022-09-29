@@ -163,14 +163,15 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Citas
+            // InterfazCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1183, 606);
             this.Controls.Add(this.ta1);
-            this.Name = "Citas";
+            this.Name = "InterfazCitas";
             this.Text = "Citas";
+            this.Load += new System.EventHandler(this.InterfazCitas_Load);
             this.ta1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

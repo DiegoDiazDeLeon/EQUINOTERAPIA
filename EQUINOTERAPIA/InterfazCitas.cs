@@ -43,6 +43,7 @@ namespace EQUINOTERAPIA
             client = new FirebaseClient(fconfig);
         }
 
+        /*
         private void MostrarCitas()
         {
             FirebaseResponse response = client.Get("BENEFES/");
@@ -57,6 +58,39 @@ namespace EQUINOTERAPIA
                     Convert.ToString(get.Value.edad)
                 );
             }
+        }*/
+
+        private void MostrarCitas()
+        {
+            dataGridView_Citas.Columns[0].HeaderText = "Notas";
+            dataGridView_Citas.Columns[1].HeaderText = "Hora";
+            dataGridView_Citas.Columns[2].HeaderText = "CURP";
+            dataGridView_Citas.Columns[3].HeaderText = "ID Caballo";
+            dataGridView_Citas.Columns[4].HeaderText = "Fecha de cita";
+
+
+
+            //Se conecta a la DB a
+            FirebaseResponse response = client.Get("Citas/");
+            //Identifica las variables de la clase citas con un id de la base de datos
+            Dictionary<string, Citas> getCitas = response.ResultAs<Dictionary<string, Citas>>();
+            //var get in getBeneficiarios;
+            foreach (var get in getCitas)
+            {
+                dataGridView_Citas.Rows.Add(
+
+                    get.Value.Notas,
+                    get.Value.Hora,
+                    get.Value.CURP,
+                    get.Value.id_Caballo,
+                    get.Value.fechaDeCita
+                );
+            }
+        }
+
+        private void InterfazCitas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

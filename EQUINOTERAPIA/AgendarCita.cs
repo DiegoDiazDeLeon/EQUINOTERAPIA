@@ -24,7 +24,11 @@ namespace EQUINOTERAPIA
             config();
         }
 
-        private void button_Cancelar_Click(object sender, EventArgs e)
+
+
+
+            /*Metodo para cancelar el llenado de datos*/
+            private void button_Cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
