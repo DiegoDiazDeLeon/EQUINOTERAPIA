@@ -16,11 +16,18 @@ namespace EQUINOTERAPIA
 {
     public partial class InterfazCitas : Form
     {
-        public IFirebaseClient client;
+        public static IFirebaseClient client;
+        //Se conecta a la DB a
+        public static FirebaseResponse response;
+        Dictionary<string, Citas> getCitas;
+
+        DataGridViewRow renglonSelecionado;
         public InterfazCitas()
         {
             InitializeComponent();
             config();
+            response = client.Get("Citas/");
+            getCitas = response.ResultAs<Dictionary<string, Citas>>();
             MostrarCitas();
             
         }
@@ -30,6 +37,7 @@ namespace EQUINOTERAPIA
             //Crea un form de tipo agendar cita y lo muestra
             AgendarCita agendarCita = new AgendarCita();
             agendarCita.Show();
+            //MostrarCitas();
         }
 
         private void config()
@@ -62,34 +70,88 @@ namespace EQUINOTERAPIA
 
         private void MostrarCitas()
         {
-            dataGridView_Citas.Columns[0].HeaderText = "Notas";
-            dataGridView_Citas.Columns[1].HeaderText = "Hora";
-            dataGridView_Citas.Columns[2].HeaderText = "CURP";
-            dataGridView_Citas.Columns[3].HeaderText = "ID Caballo";
-            dataGridView_Citas.Columns[4].HeaderText = "Fecha de cita";
-
-
-
-            //Se conecta a la DB a
-            FirebaseResponse response = client.Get("Citas/");
-            //Identifica las variables de la clase citas con un id de la base de datos
-            Dictionary<string, Citas> getCitas = response.ResultAs<Dictionary<string, Citas>>();
+            dataGridView_Citas.Rows.Clear();
             //var get in getBeneficiarios;
             foreach (var get in getCitas)
             {
                 dataGridView_Citas.Rows.Add(
-
-                    get.Value.Notas,
-                    get.Value.Hora,
                     get.Value.CURP,
                     get.Value.id_Caballo,
-                    get.Value.fechaDeCita
+                    get.Value.fechaDeCita.ToShortDateString(),
+                    get.Value.Hora,
+                    get.Value.Notas
                 );
             }
         }
 
         private void InterfazCitas_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button_Buscar_Click(object sender, EventArgs e)
+        {
+            bool Existe = false;
+            var buscador = Convert.ToString( textBox_buscador.Text);
+            foreach (var get in getCitas)
+            {
+                //para encontrar un usuario o Cita
+                if (get.Value.CURP == buscador)
+                {
+                    Existe = true;
+                        string message = "Su cita es a las: " + get.Value.Hora + '\n' + "El dia: " + get.Value.fechaDeCita.ToShortDateString();
+                        string title = "Beneficiario: " + get.Value.CURP;
+                        MessageBox.Show(message, title);
+                        break;
+                }
+            }
+            if(Existe==false)
+            {
+                string message = "No Tiene Cita";
+                string title = "Beneficiario: " + buscador;
+                MessageBox.Show(message, title);
+            }
+        }
+      //Renglon seleccionada
+        private void dataGridView_Citas_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            renglonSelecionado= dataGridView_Citas.CurrentRow;
+            //MessageBox.Show(CURP);
+        }
+
+        
+        private void button_eliminarCita_Click(object sender, EventArgs e)
+        {
+            if (renglonSelecionado != null)
+            {
+                string message = "¿Esta Seguro que desea eliminar cita? \n"+"Este proceso no se puede deshacer";
+                string title = "Eliminar Cita";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    string curp = renglonSelecionado.Cells[0].Value.ToString();
+                    client.Delete("Citas/" + curp);
+                    MessageBox.Show("La cita" + renglonSelecionado.Cells[2].Value.ToString() + "ha Sido eliminado");
+                }
+                else
+                {
+                    // Do something  
+                }
+            }
+            //(DataGridViewRow)renglonSelecionado.Cells.value
+            MostrarCitas();
+
+
+
+        }
+
+        private void button_AgregarCita_Click_1(object sender, EventArgs e)
+        {
+            //Crea un form de tipo agendar cita y lo muestra
+            AgendarCita agendarCita = new AgendarCita();
+            agendarCita.Show();
+            MostrarCitas();
 
         }
     }
