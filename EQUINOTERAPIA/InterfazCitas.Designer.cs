@@ -44,6 +44,7 @@
             this.NOTAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_AgregarCita = new System.Windows.Forms.Button();
             this.CABALLO_ = new System.Windows.Forms.TabPage();
+            this.button_refrescar = new System.Windows.Forms.Button();
             this.CITAS_.SuspendLayout();
             this.CITAS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +63,7 @@
             // 
             // CITAS
             // 
+            this.CITAS.Controls.Add(this.button_refrescar);
             this.CITAS.Controls.Add(this.button_eliminarCita);
             this.CITAS.Controls.Add(this.pictureBox1);
             this.CITAS.Controls.Add(this.label_CURP);
@@ -198,6 +200,17 @@
             this.CABALLO_.Text = "CABALLO";
             this.CABALLO_.UseVisualStyleBackColor = true;
             // 
+            // button_refrescar
+            // 
+            this.button_refrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_refrescar.Location = new System.Drawing.Point(366, 6);
+            this.button_refrescar.Name = "button_refrescar";
+            this.button_refrescar.Size = new System.Drawing.Size(41, 41);
+            this.button_refrescar.TabIndex = 7;
+            this.button_refrescar.Text = "⟲";
+            this.button_refrescar.UseVisualStyleBackColor = true;
+            this.button_refrescar.Click += new System.EventHandler(this.button_refrescar_Click);
+            // 
             // InterfazCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,5 +245,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOTAS;
         private System.Windows.Forms.Button button_eliminarCita;
+        private System.Windows.Forms.Button button_refrescar;
     }
 }
