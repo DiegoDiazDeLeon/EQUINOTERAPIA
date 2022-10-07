@@ -39,7 +39,13 @@
             this.button_Aceptar = new System.Windows.Forms.Button();
             this.button_Cancelar = new System.Windows.Forms.Button();
             this.comboBox_Caballo = new System.Windows.Forms.ComboBox();
+<<<<<<< HEAD
             this.label1 = new System.Windows.Forms.Label();
+=======
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.comboBox1ampm = new System.Windows.Forms.ComboBox();
+            this.comboBoxMinutos = new System.Windows.Forms.ComboBox();
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
             this.SuspendLayout();
             // 
             // label_CURP
@@ -80,9 +86,28 @@
             // comboBox_Hora
             // 
             this.comboBox_Hora.FormattingEnabled = true;
+<<<<<<< HEAD
             this.comboBox_Hora.Location = new System.Drawing.Point(96, 165);
             this.comboBox_Hora.Name = "comboBox_Hora";
             this.comboBox_Hora.Size = new System.Drawing.Size(166, 23);
+=======
+            this.comboBox_Hora.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.comboBox_Hora.Location = new System.Drawing.Point(119, 114);
+            this.comboBox_Hora.Name = "comboBox_Hora";
+            this.comboBox_Hora.Size = new System.Drawing.Size(49, 21);
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
             this.comboBox_Hora.TabIndex = 5;
             // 
             // label_Horario
@@ -145,6 +170,7 @@
             this.comboBox_Caballo.Size = new System.Drawing.Size(166, 23);
             this.comboBox_Caballo.TabIndex = 31;
             // 
+<<<<<<< HEAD
             // label1
             // 
             this.label1.AutoSize = true;
@@ -155,14 +181,56 @@
             this.label1.Size = new System.Drawing.Size(185, 31);
             this.label1.TabIndex = 32;
             this.label1.Text = "AGREGAR CITA";
+=======
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(418, 199);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 32;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1ampm
+            // 
+            this.comboBox1ampm.FormattingEnabled = true;
+            this.comboBox1ampm.Items.AddRange(new object[] {
+            "am",
+            "pm"});
+            this.comboBox1ampm.Location = new System.Drawing.Point(229, 114);
+            this.comboBox1ampm.Name = "comboBox1ampm";
+            this.comboBox1ampm.Size = new System.Drawing.Size(49, 21);
+            this.comboBox1ampm.TabIndex = 33;
+            // 
+            // comboBoxMinutos
+            // 
+            this.comboBoxMinutos.FormattingEnabled = true;
+            this.comboBoxMinutos.Items.AddRange(new object[] {
+            "00",
+            "15",
+            "30",
+            "45"});
+            this.comboBoxMinutos.Location = new System.Drawing.Point(174, 114);
+            this.comboBoxMinutos.Name = "comboBoxMinutos";
+            this.comboBoxMinutos.Size = new System.Drawing.Size(49, 21);
+            this.comboBoxMinutos.TabIndex = 34;
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
             // 
             // AgendarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(47)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(547, 512);
             this.Controls.Add(this.label1);
+=======
+            this.ClientSize = new System.Drawing.Size(800, 446);
+            this.Controls.Add(this.comboBoxMinutos);
+            this.Controls.Add(this.comboBox1ampm);
+            this.Controls.Add(this.checkBox1);
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
             this.Controls.Add(this.comboBox_Caballo);
             this.Controls.Add(this.button_Aceptar);
             this.Controls.Add(this.button_Cancelar);
@@ -196,6 +264,12 @@
         private System.Windows.Forms.Button button_Aceptar;
         private System.Windows.Forms.Button button_Cancelar;
         private System.Windows.Forms.ComboBox comboBox_Caballo;
+<<<<<<< HEAD
         private System.Windows.Forms.Label label1;
+=======
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox comboBox1ampm;
+        private System.Windows.Forms.ComboBox comboBoxMinutos;
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
     }
 }

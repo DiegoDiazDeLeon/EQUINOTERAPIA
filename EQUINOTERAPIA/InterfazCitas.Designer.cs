@@ -44,6 +44,7 @@
             this.NOTAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_AgregarCita = new System.Windows.Forms.Button();
             this.CABALLO_ = new System.Windows.Forms.TabPage();
+<<<<<<< HEAD
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,6 +69,11 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.TabCitas.SuspendLayout();
             this.tab_CITAS.SuspendLayout();
+=======
+            this.button_refrescar = new System.Windows.Forms.Button();
+            this.CITAS_.SuspendLayout();
+            this.CITAS.SuspendLayout();
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Citas)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -92,6 +98,7 @@
             // 
             // tab_CITAS
             // 
+<<<<<<< HEAD
             this.tab_CITAS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
             this.tab_CITAS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tab_CITAS.Controls.Add(this.button_eliminarCita);
@@ -108,6 +115,23 @@
             this.tab_CITAS.Size = new System.Drawing.Size(1175, 579);
             this.tab_CITAS.TabIndex = 0;
             this.tab_CITAS.Text = "CITAS";
+=======
+            this.CITAS.Controls.Add(this.button_refrescar);
+            this.CITAS.Controls.Add(this.button_eliminarCita);
+            this.CITAS.Controls.Add(this.pictureBox1);
+            this.CITAS.Controls.Add(this.label_CURP);
+            this.CITAS.Controls.Add(this.button_Buscar);
+            this.CITAS.Controls.Add(this.textBox_buscador);
+            this.CITAS.Controls.Add(this.dataGridView_Citas);
+            this.CITAS.Controls.Add(this.button_AgregarCita);
+            this.CITAS.Location = new System.Drawing.Point(4, 22);
+            this.CITAS.Name = "CITAS";
+            this.CITAS.Padding = new System.Windows.Forms.Padding(3);
+            this.CITAS.Size = new System.Drawing.Size(1151, 556);
+            this.CITAS.TabIndex = 0;
+            this.CITAS.Text = "CITAS";
+            this.CITAS.UseVisualStyleBackColor = true;
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
             // 
             // button_eliminarCita
             // 
@@ -231,6 +255,7 @@
             this.CABALLO_.Text = "CABALLO";
             this.CABALLO_.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(147)))), ((int)(((byte)(196)))));
@@ -440,6 +465,18 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 22);
             this.comboBox2.TabIndex = 13;
+=======
+            // button_refrescar
+            // 
+            this.button_refrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_refrescar.Location = new System.Drawing.Point(366, 6);
+            this.button_refrescar.Name = "button_refrescar";
+            this.button_refrescar.Size = new System.Drawing.Size(41, 41);
+            this.button_refrescar.TabIndex = 7;
+            this.button_refrescar.Text = "⟲";
+            this.button_refrescar.UseVisualStyleBackColor = true;
+            this.button_refrescar.Click += new System.EventHandler(this.button_refrescar_Click);
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
             // 
             // InterfazCitas
             // 
@@ -481,6 +518,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOTAS;
         private System.Windows.Forms.Button button_eliminarCita;
+<<<<<<< HEAD
         private System.Windows.Forms.TabControl TabCitas;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -504,5 +542,8 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox comboBox2;
+=======
+        private System.Windows.Forms.Button button_refrescar;
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
     }
 }

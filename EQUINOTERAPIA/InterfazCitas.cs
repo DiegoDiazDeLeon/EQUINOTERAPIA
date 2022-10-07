@@ -26,8 +26,7 @@ namespace EQUINOTERAPIA
         {
             InitializeComponent();
             config();
-            response = client.Get("Citas/");
-            getCitas = response.ResultAs<Dictionary<string, Citas>>();
+            
             MostrarCitas();
             //SetTabPageHeaderColor(tab_CITAS,Color.Gold);
             //SetTabHeader(tab_CITAS,Color.Gold);
@@ -50,8 +49,21 @@ namespace EQUINOTERAPIA
                 AuthSecret = "czGcy6xx0Rko6k6BiQSmreMXBJJveeTdNGQXYxrv",
                 BasePath = "https://equinoterapia-d4038-default-rtdb.firebaseio.com/",
             };
+<<<<<<< HEAD
             client = new FirebaseClient(fconfig);
             
+=======
+            try
+            {
+                client = new FirebaseClient(fconfig);
+                response = client.Get("Citas/");
+                getCitas = response.ResultAs<Dictionary<string, Citas>>();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+>>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
         }
 
         /*
@@ -72,18 +84,23 @@ namespace EQUINOTERAPIA
         }*/
 
         private void MostrarCitas()
-        {
-            dataGridView_Citas.Rows.Clear();
-            //var get in getBeneficiarios;
-            foreach (var get in getCitas)
+        { 
+            config();
+            if (getCitas != null)
             {
-                dataGridView_Citas.Rows.Add(
-                    get.Value.CURP,
-                    get.Value.id_Caballo,
-                    get.Value.fechaDeCita.ToShortDateString(),
-                    get.Value.Hora,
-                    get.Value.Notas
-                );
+                dataGridView_Citas.Rows.Clear();
+                //var get in getBeneficiarios;
+               
+                foreach (var get in getCitas)
+                {
+                    dataGridView_Citas.Rows.Add(
+                        get.Value.CURP,
+                        get.Value.id_Caballo,
+                        get.Value.fechaDeCita.ToShortDateString(),
+                        get.Value.Hora,
+                        get.Value.Notas
+                    );
+                }
             }
         }
 
@@ -143,7 +160,7 @@ namespace EQUINOTERAPIA
                 }
             }
             //(DataGridViewRow)renglonSelecionado.Cells.value
-            MostrarCitas();
+            //MostrarCitas();
 
 
 
@@ -154,6 +171,12 @@ namespace EQUINOTERAPIA
             //Crea un form de tipo agendar cita y lo muestra
             AgendarCita agendarCita = new AgendarCita();
             agendarCita.Show();
+          //  MostrarCitas();
+
+        }
+
+        private void button_refrescar_Click(object sender, EventArgs e)
+        {
             MostrarCitas();
 
         }

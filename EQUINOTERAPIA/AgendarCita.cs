@@ -51,14 +51,16 @@ namespace EQUINOTERAPIA
             Citas citas = new Citas()
             {
                 CURP = comboBox1_CURP.Text,
-                Hora = comboBox_Hora.Text,
+                Hora = comboBox_Hora.Text+":" +comboBoxMinutos.Text+""+comboBox1ampm.Text,
                 id_Caballo = comboBox_Caballo.Text,
                 fechaDeCita = DateTime.Parse(cit),
-        };
+                Notas= textBox_Notas.Text,
+            };
             try
             {
                 client.Set("Citas/" + comboBox1_CURP.Text, citas);
-                MessageBox.Show("correcto");
+                MessageBox.Show("cita agendada con exito");
+                this.Close();
             }
             catch
             {
