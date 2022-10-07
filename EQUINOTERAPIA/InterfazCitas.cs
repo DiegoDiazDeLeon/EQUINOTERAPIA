@@ -49,10 +49,9 @@ namespace EQUINOTERAPIA
                 AuthSecret = "czGcy6xx0Rko6k6BiQSmreMXBJJveeTdNGQXYxrv",
                 BasePath = "https://equinoterapia-d4038-default-rtdb.firebaseio.com/",
             };
-<<<<<<< HEAD
+
             client = new FirebaseClient(fconfig);
             
-=======
             try
             {
                 client = new FirebaseClient(fconfig);
@@ -63,7 +62,6 @@ namespace EQUINOTERAPIA
             {
                 MessageBox.Show(e.ToString());
             }
->>>>>>> 23c1f3c18bf2ecaf3a39c57be4caf6ad91cbfc66
         }
 
         /*
@@ -210,6 +208,11 @@ namespace EQUINOTERAPIA
                 e.Graphics.DrawRectangle(Pens.DarkGray, rect);
                 e.DrawFocusRectangle();
             }
+        }
+
+        private void button_actualizar_Click(object sender, EventArgs e)
+        {
+            MostrarCitas();
         }
     }
 }
