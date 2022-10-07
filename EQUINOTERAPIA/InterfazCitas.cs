@@ -29,6 +29,8 @@ namespace EQUINOTERAPIA
             response = client.Get("Citas/");
             getCitas = response.ResultAs<Dictionary<string, Citas>>();
             MostrarCitas();
+            //SetTabPageHeaderColor(tab_CITAS,Color.Gold);
+            //SetTabHeader(tab_CITAS,Color.Gold);
             
         }
 
@@ -42,13 +44,14 @@ namespace EQUINOTERAPIA
 
         private void config()
         {
+            tab_CITAS.BorderStyle = BorderStyle.None;
             IFirebaseConfig fconfig = new FirebaseConfig
             {
                 AuthSecret = "czGcy6xx0Rko6k6BiQSmreMXBJJveeTdNGQXYxrv",
                 BasePath = "https://equinoterapia-d4038-default-rtdb.firebaseio.com/",
             };
-
             client = new FirebaseClient(fconfig);
+            
         }
 
         /*
@@ -153,6 +156,37 @@ namespace EQUINOTERAPIA
             agendarCita.Show();
             MostrarCitas();
 
+        }
+
+        public void SetTabPageHeaderColor(TabPage page, Color color)
+        {
+            
+            TabCitas.DrawMode = TabDrawMode.OwnerDrawFixed;
+            TabCitas.DrawItem += new DrawItemEventHandler(tabCitas_DrawItem);
+
+        }
+
+        private Dictionary<TabPage, Color> TabColors = new Dictionary<TabPage, Color>();
+        private void SetTabHeader(TabPage page, Color color)
+        {
+            TabColors[page] = color;
+            TabCitas.Invalidate();
+        }
+        private void tabCitas_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            //e.DrawBackground();
+            using (Brush br = new SolidBrush(TabColors[TabCitas.TabPages[0]]))
+            {
+                e.Graphics.FillRectangle(br, e.Bounds);
+                SizeF sz = e.Graphics.MeasureString(TabCitas.TabPages[0].Text, e.Font);
+                e.Graphics.DrawString(TabCitas.TabPages[0].Text, e.Font, Brushes.Black, e.Bounds.Left + (e.Bounds.Width - sz.Width) / 2, e.Bounds.Top + (e.Bounds.Height - sz.Height) / 2 + 1);
+
+                Rectangle rect = e.Bounds;
+                rect.Offset(0, 1);
+                rect.Inflate(0, -1);
+                e.Graphics.DrawRectangle(Pens.DarkGray, rect);
+                e.DrawFocusRectangle();
+            }
         }
     }
 }
